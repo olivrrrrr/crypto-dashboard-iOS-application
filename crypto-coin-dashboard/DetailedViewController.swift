@@ -34,6 +34,8 @@ class DetailedViewController: ViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var symbolLabel: UILabel!
+
     
     var coin: CoinStats?
     
@@ -41,6 +43,8 @@ class DetailedViewController: ViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         nameLabel.text = coin?.name
+        symbolLabel.text = coin?.symbol
+        
         
         let urlString : String = String((coin?.image)!)
         let url = URL(string: urlString)

@@ -22,7 +22,7 @@ class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func downloadJSON(completed: @escaping () -> ()){
-        let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=gbp&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=1h%2C%2024h%2C7d%2C30d%2C1y")
+        let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=true&price_change_percentage=7d")
         
         URLSession.shared.dataTask(with: url!) {(data, response, error) in
             
