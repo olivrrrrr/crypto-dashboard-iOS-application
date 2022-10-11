@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController:  UIViewController {
 
     var coins = [CoinStats]()
     
@@ -15,6 +15,10 @@ class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTableViewDelegate()
+        // set Row height
+       // tableView.rowHeight = 1
+        
         // Do any additional setup after loading the view.
         downloadJSON {
             self.tableView?.reloadData()
@@ -37,24 +41,16 @@ class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSou
                     print("Error")
                 }
             }
-            
         }.resume()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection sections: Int) -> Int{
-       return coins.count
+    func setTableViewDelegate(){
+        tableView?.delegate = self
+        tableView?.dataSource = self
+        // Register the cell
+        tableView?.register(CryptoTableViewCell.self, forCellReuseIdentifier: "CryptoTableViewCell")
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = coins[indexPath.row].name
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDetails", sender: self)
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails"{
             if let destination = segue.destination as? DetailedViewController {
@@ -64,16 +60,26 @@ class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSou
     }
 }
 
-//extension ViewController: UITableViewDataSource {
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection sections: Int) -> Int{
-//        return 10
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell()
-//        cell.textLabel?.text = coins[indexPath.row].name
-//        return cell
-//    }
-//}
-
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection sections: Int) -> Int{
+       return coins.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CryptoTableViewCell", for: indexPath) as?  CryptoTableViewCell else {
+            fatalError("Error")
+        }
+        
+        let coin = coins[indexPath.row]
+        
+       cell.nameLabel?.text = "hello"
+       // cell.symbolLabel?.text = "helo"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetails", sender: self)
+    }
+}

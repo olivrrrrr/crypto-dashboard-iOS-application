@@ -11,5 +11,6 @@ struct CoinStats: Decodable{
     let name: String
     let symbol : String
     let image : String
+    
 }
 

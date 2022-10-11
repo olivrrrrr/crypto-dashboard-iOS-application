@@ -7,15 +7,15 @@
 
 import UIKit
 
-struct CryptoTableViewCellViewModel {
-    let name: String
-    let symbol : String
-    let image : String
-}
+//struct CryptoTableViewCellViewModel {
+//    let name: String
+//    let symbol : String
+//    let image : String
+//}
 
 class CryptoTableViewCell: UITableViewCell {
 
-    static let identifier = "CryptoTableViewCell"
+   // static let identifier = "CryptoTableViewCell"
     
     @IBOutlet var imageLabel: UIImage!
     @IBOutlet var nameLabel: UILabel!

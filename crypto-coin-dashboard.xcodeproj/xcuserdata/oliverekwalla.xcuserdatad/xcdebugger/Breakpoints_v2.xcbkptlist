@@ -14,10 +14,102 @@
             filePath = "crypto-coin-dashboard/DetailedViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
             landmarkName = "DetailedViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5C14C941-1D52-44CE-AB4E-1CF93E506BB3 - 99b8d0f2722d82e1"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "crypto_coin_dashboard.DetailedViewController.imageView.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "crypto-coin-dashboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oliverekwalla/Documents/crypto-dashboard-iPhone-application/crypto-coin-dashboard/DetailedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "5C14C941-1D52-44CE-AB4E-1CF93E506BB3 - 237c0da4f4d056d5"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "crypto_coin_dashboard.DetailedViewController.imageView.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "crypto-coin-dashboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oliverekwalla/Documents/crypto-dashboard-iPhone-application/crypto-coin-dashboard/DetailedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "5C14C941-1D52-44CE-AB4E-1CF93E506BB3 - 7556102d7ae219e6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "crypto_coin_dashboard.DetailedViewController.imageView.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "crypto-coin-dashboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oliverekwalla/Documents/crypto-dashboard-iPhone-application/crypto-coin-dashboard/DetailedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "5C14C941-1D52-44CE-AB4E-1CF93E506BB3 - 9978e3918aaf0675"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "crypto_coin_dashboard.DetailedViewController.imageView.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "crypto-coin-dashboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oliverekwalla/Documents/crypto-dashboard-iPhone-application/crypto-coin-dashboard/DetailedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "5C14C941-1D52-44CE-AB4E-1CF93E506BB3 - f5908035d6e6fed0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "crypto_coin_dashboard.DetailedViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; crypto_coin_dashboard.DetailedViewController"
+                  moduleName = "crypto-coin-dashboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oliverekwalla/Documents/crypto-dashboard-iPhone-application/crypto-coin-dashboard/DetailedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "5C14C941-1D52-44CE-AB4E-1CF93E506BB3 - 25e7597138520ab3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "crypto_coin_dashboard.DetailedViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;crypto_coin_dashboard.DetailedViewController&gt;"
+                  moduleName = "crypto-coin-dashboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oliverekwalla/Documents/crypto-dashboard-iPhone-application/crypto-coin-dashboard/DetailedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
