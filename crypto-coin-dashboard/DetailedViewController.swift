@@ -30,6 +30,8 @@ class DetailedViewController: ViewController {
         
         imageView.downloaded(from: (url)!)
         
+        priceLabel.text = String((coin?.current_price)!)
+        
     }
     
 }

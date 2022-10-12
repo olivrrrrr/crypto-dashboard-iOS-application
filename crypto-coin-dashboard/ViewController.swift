@@ -18,7 +18,6 @@ class ViewController:  UIViewController {
         setTableViewDelegate()
         // set Row height
        // tableView.rowHeight = 1
-        
         // Do any additional setup after loading the view.
         downloadJSON {
             self.tableView?.reloadData()
@@ -45,10 +44,12 @@ class ViewController:  UIViewController {
     }
     
     func setTableViewDelegate(){
+        
+        // Data Source
         tableView?.delegate = self
         tableView?.dataSource = self
         // Register the cell
-        tableView?.register(CryptoTableViewCell.self, forCellReuseIdentifier: "CryptoTableViewCell")
+        //tableView?.register(CryptoTableViewCell.self, forCellReuseIdentifier: "CryptoTableViewCell")
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -68,18 +69,33 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CryptoTableViewCell", for: indexPath) as?  CryptoTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(CryptoTableViewCell.self)", for: indexPath) as? CryptoTableViewCell else {
             fatalError("Error")
         }
         
         let coin = coins[indexPath.row]
+        //cell.backgroundColor = .magenta
         
-       cell.nameLabel?.text = "hello"
-       // cell.symbolLabel?.text = "helo"
+        cell.symbolLabel?.text = coin.symbol
+        cell.nameLabel?.text = coin.name
+        cell.priceLabel?.text = String((coin.current_price))
+        
+        let urlString : String = String((coin.image))
+        let url = URL(string: urlString)
+        
+        cell.imageLabel?.downloaded(from: (url)!)
+        
+        cell.price_change_24hLabel?.text = String((coin.price_change_24h))
+        cell.price_change_24hLabel.textColor = coin.price_change_24h < 0 ? .red : .green
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDetails", sender: self)
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "showDetails", sender: self)
+//    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 60
     }
 }

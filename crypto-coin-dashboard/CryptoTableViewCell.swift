@@ -17,7 +17,7 @@ class CryptoTableViewCell: UITableViewCell {
 
    // static let identifier = "CryptoTableViewCell"
     
-    @IBOutlet var imageLabel: UIImage!
+    @IBOutlet weak var imageLabel: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var symbolLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
