@@ -44,7 +44,6 @@ class ViewController:  UIViewController {
     }
     
     func setTableViewDelegate(){
-        
         // Data Source
         tableView?.delegate = self
         tableView?.dataSource = self
@@ -68,9 +67,11 @@ class ViewController:  UIViewController {
 func preciseRound(_ number : Double, _ precision: String ) -> Double {
     switch precision{
     case "tenths":
-        return number / 10
+        return number
     case "hundrenths":
-        return number / 100
+        return Double(round(100000000 * number) / 100000000)
+    case "thousandth":
+        return Double(round(1000 * number) / 1000)
     default:
         return number
     }
@@ -89,9 +90,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         let coin = coins[indexPath.row]
-        //cell.backgroundColor = .magenta
-        
-        cell.symbolLabel?.text = coin.symbol
+       
+        cell.symbolLabel?.text = coin.symbol.uppercased()
         cell.nameLabel?.text = coin.name
         cell.priceLabel?.text = String((coin.current_price))
         
@@ -100,8 +100,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.imageLabel?.downloaded(from: (url)!)
         
-        cell.price_change_24hLabel?.text = String(preciseRound(coin.price_change_24h, "tenths"))
-        cell.price_change_24hLabel.textColor = coin.price_change_24h < 0 ? .red : .green
+        //NumberFormatter.RoundingMode(rawValue: <#T##UInt#>)
+        //cell.price_change_24hLabel?.text = String(preciseRound(coin.price_change_24h, "hundrenths"))
+        
+        cell.price_change_percentage_24hLabel?.text = "\(coin.price_change_percentage_24h)%"
+        cell.price_change_percentage_24hLabel.textColor = coin.price_change_percentage_24h < 0 ? .red : .green
         return cell
     }
     
@@ -109,8 +112,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 //        performSegue(withIdentifier: "showDetails", sender: self)
 //    }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
 }

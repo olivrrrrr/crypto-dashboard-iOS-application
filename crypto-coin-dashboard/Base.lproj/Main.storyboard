@@ -80,8 +80,9 @@
                                             <outlet property="imageLabel" destination="8hT-MD-Ofp" id="e9R-Yp-5ei"/>
                                             <outlet property="nameLabel" destination="6uj-Uv-FEX" id="IE8-gi-14m"/>
                                             <outlet property="priceLabel" destination="LVW-Yf-M7P" id="Zqe-t7-NtR"/>
-                                            <outlet property="price_change_24hLabel" destination="Dcc-A3-X0a" id="NKC-Hj-ICA"/>
+                                            <outlet property="price_change_percentage_24hLabel" destination="Dcc-A3-X0a" id="0uV-AG-nre"/>
                                             <outlet property="symbolLabel" destination="7Lm-r7-wsG" id="tPQ-e4-QZE"/>
+                                            <segue destination="gir-sJ-hWK" kind="show" id="uFL-Jl-gyS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -144,10 +145,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uHu-Md-xmC"/>
                     <connections>
-                        <outlet property="imageView" destination="XwK-ex-Won" id="V9f-bY-DL9"/>
-                        <outlet property="nameLabel" destination="eti-6r-RKG" id="awN-oN-FEH"/>
-                        <outlet property="priceLabel" destination="xc9-bg-NOx" id="5dm-d2-vGG"/>
-                        <outlet property="symbolLabel" destination="20A-oW-gb3" id="BEw-4v-9bb"/>
+                        <outlet property="nameLabel" destination="eti-6r-RKG" id="2EG-Zn-gNf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTN-7p-MzE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

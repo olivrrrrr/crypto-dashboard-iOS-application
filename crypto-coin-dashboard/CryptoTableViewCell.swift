@@ -23,5 +23,6 @@ class CryptoTableViewCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var symbolLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
-   @IBOutlet var price_change_24hLabel: UILabel!
+    @IBOutlet var price_change_percentage_24hLabel: UILabel!
+
 }

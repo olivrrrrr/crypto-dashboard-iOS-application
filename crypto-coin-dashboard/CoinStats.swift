@@ -12,7 +12,7 @@ struct CoinStats: Decodable{
     let symbol : String
     let image : String
     let current_price: Double
-    let price_change_24h: Double
+    let price_change_percentage_24h: Double
     
 }
 
