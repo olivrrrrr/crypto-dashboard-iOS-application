@@ -61,6 +61,21 @@ class ViewController:  UIViewController {
     }
 }
 
+
+// Where should this auxilliary function go ?
+// An extension on Double
+
+func preciseRound(_ number : Double, _ precision: String ) -> Double {
+    switch precision{
+    case "tenths":
+        return number / 10
+    case "hundrenths":
+        return number / 100
+    default:
+        return number
+    }
+}
+
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection sections: Int) -> Int{
@@ -85,7 +100,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.imageLabel?.downloaded(from: (url)!)
         
-        cell.price_change_24hLabel?.text = String((coin.price_change_24h))
+        cell.price_change_24hLabel?.text = String(preciseRound(coin.price_change_24h, "tenths"))
         cell.price_change_24hLabel.textColor = coin.price_change_24h < 0 ? .red : .green
         return cell
     }
@@ -96,6 +111,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return 60
+        return 70
     }
 }

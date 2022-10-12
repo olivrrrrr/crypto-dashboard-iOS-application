@@ -14,12 +14,14 @@ import UIKit
 //}
 
 class CryptoTableViewCell: UITableViewCell {
-
-   // static let identifier = "CryptoTableViewCell"
+    
+    enum identifier {
+        static let cryptoCellIdentifier = "CryptoTableViewCell"
+    }
     
     @IBOutlet weak var imageLabel: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var symbolLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
-    @IBOutlet var price_change_24hLabel: UILabel!
+   @IBOutlet var price_change_24hLabel: UILabel!
 }

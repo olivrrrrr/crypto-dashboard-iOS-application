@@ -10,11 +10,11 @@
 		49404D8E28F2D38A009BC538 /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49404D8D28F2D38A009BC538 /* CryptoTableViewCell.swift */; };
 		49404D9028F2E14D009BC538 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49404D8F28F2E14D009BC538 /* APICaller.swift */; };
 		4950030428F44DCC005E6926 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4950030328F44DCC005E6926 /* UIImageViewExtension.swift */; };
+		496B464C28F714570038A858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 496B464B28F714570038A858 /* Assets.xcassets */; };
 		49F895F928F17D20007341C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F895F828F17D20007341C8 /* AppDelegate.swift */; };
 		49F895FB28F17D20007341C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F895FA28F17D20007341C8 /* SceneDelegate.swift */; };
 		49F895FD28F17D20007341C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F895FC28F17D20007341C8 /* ViewController.swift */; };
 		49F8960028F17D20007341C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F895FE28F17D20007341C8 /* Main.storyboard */; };
-		49F8960228F17D22007341C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F8960128F17D22007341C8 /* Assets.xcassets */; };
 		49F8960528F17D22007341C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F8960328F17D22007341C8 /* LaunchScreen.storyboard */; };
 		49F8960D28F183CC007341C8 /* CoinStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8960C28F183CC007341C8 /* CoinStats.swift */; };
 		49F8960F28F18576007341C8 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8960E28F18576007341C8 /* DetailedViewController.swift */; };
@@ -24,12 +24,12 @@
 		49404D8D28F2D38A009BC538 /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
 		49404D8F28F2E14D009BC538 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		4950030328F44DCC005E6926 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		496B464B28F714570038A858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F895F528F17D20007341C8 /* crypto-coin-dashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "crypto-coin-dashboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F895F828F17D20007341C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49F895FA28F17D20007341C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		49F895FC28F17D20007341C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		49F895FF28F17D20007341C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		49F8960128F17D22007341C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F8960428F17D22007341C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49F8960628F17D22007341C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49F8960C28F183CC007341C8 /* CoinStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinStats.swift; sourceTree = "<group>"; };
@@ -71,10 +71,10 @@
 				49F8960E28F18576007341C8 /* DetailedViewController.swift */,
 				49F895FC28F17D20007341C8 /* ViewController.swift */,
 				49F895FE28F17D20007341C8 /* Main.storyboard */,
+				496B464B28F714570038A858 /* Assets.xcassets */,
 				49404D8F28F2E14D009BC538 /* APICaller.swift */,
 				49F8960C28F183CC007341C8 /* CoinStats.swift */,
 				49404D8D28F2D38A009BC538 /* CryptoTableViewCell.swift */,
-				49F8960128F17D22007341C8 /* Assets.xcassets */,
 				49F8960328F17D22007341C8 /* LaunchScreen.storyboard */,
 				49F8960628F17D22007341C8 /* Info.plist */,
 				4950030328F44DCC005E6926 /* UIImageViewExtension.swift */,
@@ -141,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49F8960528F17D22007341C8 /* LaunchScreen.storyboard in Resources */,
-				49F8960228F17D22007341C8 /* Assets.xcassets in Resources */,
+				496B464C28F714570038A858 /* Assets.xcassets in Resources */,
 				49F8960028F17D20007341C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
