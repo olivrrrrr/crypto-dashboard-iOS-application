@@ -22,7 +22,7 @@ class DetailedViewController: ViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         nameLabel.text = coin?.name
-       // symbolLabel.text = coin?.symbol
+        // symbolLabel.text = coin?.symbol
         // priceLabel.text = coin?.current_price
         
 //        let urlString : String = String((coin?.image)!)
@@ -33,6 +33,5 @@ class DetailedViewController: ViewController {
         // priceLabel.text = String((coin?.current_price))
         
     }
-    
 }
 

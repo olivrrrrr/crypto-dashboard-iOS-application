@@ -82,7 +82,7 @@
                                             <outlet property="priceLabel" destination="LVW-Yf-M7P" id="Zqe-t7-NtR"/>
                                             <outlet property="price_change_percentage_24hLabel" destination="Dcc-A3-X0a" id="0uV-AG-nre"/>
                                             <outlet property="symbolLabel" destination="7Lm-r7-wsG" id="tPQ-e4-QZE"/>
-                                            <segue destination="gir-sJ-hWK" kind="show" id="uFL-Jl-gyS"/>
+                                            <segue destination="i9Y-vi-btX" kind="show" identifier="showDetails" id="AN9-Ln-TDW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -107,50 +107,39 @@
             <point key="canvasLocation" x="790.76923076923072" y="3.5545023696682461"/>
         </scene>
         <!--Detailed View Controller-->
-        <scene sceneID="y5J-ic-et2">
+        <scene sceneID="HNv-rG-SKC">
             <objects>
-                <viewController id="gir-sJ-hWK" customClass="DetailedViewController" customModule="crypto_coin_dashboard" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8hS-Gs-I22">
+                <viewController id="i9Y-vi-btX" customClass="DetailedViewController" customModule="crypto_coin_dashboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oe2-ri-ert">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20A-oW-gb3">
-                                <rect key="frame" x="166" y="170" width="58" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XwK-ex-Won">
-                                <rect key="frame" x="75" y="199" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="eti-6r-RKG">
-                                <rect key="frame" x="173" y="143" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xc9-bg-NOx">
-                                <rect key="frame" x="176" y="335" width="39" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HA5-Oy-AjC">
+                                <rect key="frame" x="20" y="143" width="134.33333333333334" height="57.333333333333343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="318" id="r7d-3g-vb8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="mTP-XU-r4B"/>
+                        <viewLayoutGuide key="safeArea" id="W4r-Qa-hq2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HA5-Oy-AjC" firstAttribute="leading" secondItem="W4r-Qa-hq2" secondAttribute="leading" constant="20" id="9Au-9b-e40"/>
+                            <constraint firstItem="W4r-Qa-hq2" firstAttribute="trailing" secondItem="HA5-Oy-AjC" secondAttribute="trailing" constant="5" id="MLw-WL-yX4"/>
+                            <constraint firstItem="HA5-Oy-AjC" firstAttribute="top" secondItem="W4r-Qa-hq2" secondAttribute="top" id="UEh-eT-6x2"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uHu-Md-xmC"/>
+                    <navigationItem key="navigationItem" id="YGg-9q-kIB"/>
                     <connections>
-                        <outlet property="nameLabel" destination="eti-6r-RKG" id="2EG-Zn-gNf"/>
+                        <outlet property="nameLabel" destination="HA5-Oy-AjC" id="8MO-0k-LGb"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WTN-7p-MzE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zqn-Fz-L1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1725" y="4"/>
+            <point key="canvasLocation" x="1741.5384615384614" y="3.5545023696682461"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xym-Jb-fD2">

@@ -100,7 +100,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.imageLabel?.downloaded(from: (url)!)
         
-        //NumberFormatter.RoundingMode(rawValue: <#T##UInt#>)
+        // NumberFormatter.RoundingMode(rawValue: <#T##UInt#>)
         //cell.price_change_24hLabel?.text = String(preciseRound(coin.price_change_24h, "hundrenths"))
         
         cell.price_change_percentage_24hLabel?.text = "\(coin.price_change_percentage_24h)%"
